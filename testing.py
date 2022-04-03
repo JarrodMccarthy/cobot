@@ -4,6 +4,12 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 
+
+#Commands for Mosquitto
+#start the broker: moquitto -v
+#mosquitto_pub -h 192.168.20.30 -t test -m "Hello" - run on server
+#mosquitto_sub -v -t "#" - run on client
+
 mc = MyCobot("/dev/ttyAMA0", 1000000)
 
 startposition = [0, -15, 0, 0, 0, 0]
